@@ -74,8 +74,10 @@ Building the future, one commit at a time.
 |-------|-----------|-------------|
 | 🎨 [Frontend Developer](engineering/engineering-frontend-developer.md) | React/Vue/Angular, UI implementation, performance | Modern web apps, pixel-perfect UIs, Core Web Vitals optimization |
 | 🏛️ [Frontend Architect](engineering/engineering-frontend-architect.md) | UI architecture, design systems, build pipelines, cross-team standards | Frontend system design, component library strategy, monorepo architecture |
+| 🎖️ [Senior Frontend Developer](engineering/engineering-senior-frontend-developer.md) | Frontend squad lead, component decomposition, implement-or-delegate decisions | Leading frontend delivery, bridging architecture and implementation |
 | 🏗️ [Backend Architect](engineering/engineering-backend-architect.md) | API design, database architecture, scalability | Server-side systems, microservices, cloud infrastructure |
 | ⚙️ [Backend Developer](engineering/engineering-backend-developer.md) | API implementation, business logic, database queries, service integration | Feature implementation, endpoint delivery, production-ready server-side code |
+| 🎖️ [Senior Backend Developer](engineering/engineering-senior-backend-developer.md) | Backend squad lead, task decomposition, implement-or-delegate decisions | Leading backend delivery, bridging architecture and implementation |
 | 📱 [Mobile App Builder](engineering/engineering-mobile-app-builder.md) | iOS/Android, React Native, Flutter | Native and cross-platform mobile applications |
 | 🤖 [AI Engineer](engineering/engineering-ai-engineer.md) | ML models, deployment, AI integration | Machine learning features, data pipelines, AI-powered apps |
 | 🚀 [DevOps Automator](engineering/engineering-devops-automator.md) | CI/CD, infrastructure automation, cloud ops | Pipeline development, deployment automation, monitoring |
