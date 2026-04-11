@@ -27,10 +27,13 @@ Born from a Reddit thread and months of iteration, **The Agency** is a growing c
 ### Option 1: Use with Claude Code (Recommended)
 
 ```bash
-# Copy agents to your Claude Code directory
-cp -r agency-agents/* ~/.claude/agents/
+# Install all agents to your Claude Code directory
+./scripts/install.sh --tool claude-code
 
-# Now activate any agent in your Claude Code sessions:
+# Or manually copy a category if you only want one division
+cp engineering/*.md ~/.claude/agents/
+
+# Then activate any agent in your Claude Code sessions:
 # "Hey Claude, activate Frontend Developer mode and help me build a React component"
 ```
 
@@ -44,7 +47,7 @@ Each agent file contains:
 
 Browse the agents below and copy/adapt the ones you need!
 
-### Option 3: Use with Other Tools (Cursor, Aider, Windsurf, Gemini CLI, OpenCode, Kimi Code)
+### Option 3: Use with Other Tools (GitHub Copilot, Antigravity, Gemini CLI, OpenCode, OpenClaw, Cursor, Aider, Windsurf, Kimi Code)
 
 ```bash
 # Step 1 -- generate integration files for all supported tools
@@ -54,8 +57,12 @@ Browse the agents below and copy/adapt the ones you need!
 ./scripts/install.sh
 
 # Or target a specific tool directly
-./scripts/install.sh --tool cursor
+./scripts/install.sh --tool antigravity
+./scripts/install.sh --tool gemini-cli
+./scripts/install.sh --tool opencode
 ./scripts/install.sh --tool copilot
+./scripts/install.sh --tool openclaw
+./scripts/install.sh --tool cursor
 ./scripts/install.sh --tool aider
 ./scripts/install.sh --tool windsurf
 ./scripts/install.sh --tool kimi
@@ -90,6 +97,7 @@ Building the future, one commit at a time.
 | 🔩 [Embedded Firmware Engineer](engineering/engineering-embedded-firmware-engineer.md) | Bare-metal, RTOS, ESP32/STM32/Nordic firmware | Production-grade embedded systems and IoT devices |
 | 🚨 [Incident Response Commander](engineering/engineering-incident-response-commander.md) | Incident management, post-mortems, on-call | Managing production incidents and building incident readiness |
 | ⛓️ [Solidity Smart Contract Engineer](engineering/engineering-solidity-smart-contract-engineer.md) | EVM contracts, gas optimization, DeFi | Secure, gas-optimized smart contracts and DeFi protocols |
+| 🧭 [Codebase Onboarding Engineer](engineering/engineering-codebase-onboarding-engineer.md) | Fast developer onboarding, read-only codebase exploration, factual explanation | Helping new developers understand unfamiliar repos quickly by reading the code, tracing code paths, and stating facts about structure and behavior |
 | 📚 [Technical Writer](engineering/engineering-technical-writer.md) | Developer docs, API reference, tutorials | Clear, accurate technical documentation |
 | 🎯 [Threat Detection Engineer](engineering/engineering-threat-detection-engineer.md) | SIEM rules, threat hunting, ATT&CK mapping | Building detection layers and threat hunting |
 | 💬 [WeChat Mini Program Developer](engineering/engineering-wechat-mini-program-developer.md) | WeChat ecosystem, Mini Programs, payment integration | Building performant apps for the WeChat ecosystem |
@@ -284,6 +292,18 @@ The unique specialists who don't fit in a box.
 | 🇫🇷 [French Consulting Market Navigator](specialized/specialized-french-consulting-market.md) | ESN/SI ecosystem, portage salarial, rate positioning | Freelance consulting in the French IT market |
 | 🇰🇷 [Korean Business Navigator](specialized/specialized-korean-business-navigator.md) | Korean business culture, 품의 process, relationship mechanics | Foreign professionals navigating Korean business relationships |
 | 🏗️ [Civil Engineer](specialized/specialized-civil-engineer.md) | Structural analysis, geotechnical design, global building codes | Multi-standard structural engineering across Eurocode, ACI, AISC, and more |
+
+### 💵 Finance Division
+
+Accounting, financial analysis, tax strategy, and investment research specialists.
+
+| Agent | Specialty | When to Use |
+|-------|-----------|-------------|
+| 📒 [Bookkeeper & Controller](finance/finance-bookkeeper-controller.md) | Month-end close, reconciliation, GAAP compliance, internal controls | Day-to-day accounting operations, audit readiness, financial record-keeping |
+| 📊 [Financial Analyst](finance/finance-financial-analyst.md) | Financial modeling, forecasting, scenario analysis, decision support | Three-statement models, variance analysis, data-driven business intelligence |
+| 📈 [FP&A Analyst](finance/finance-fpa-analyst.md) | Budgeting, rolling forecasts, variance analysis, business reviews | Annual operating plans, monthly business reviews, strategic resource allocation |
+| 🔍 [Investment Researcher](finance/finance-investment-researcher.md) | Due diligence, portfolio analysis, asset valuation, equity research | Investment thesis development, risk assessment, market research |
+| 🏛️ [Tax Strategist](finance/finance-tax-strategist.md) | Tax optimization, multi-jurisdictional compliance, transfer pricing | Entity structuring, ETR analysis, audit defense, strategic tax planning |
 
 ### 🎮 Game Development Division
 
@@ -744,10 +764,12 @@ See [integrations/windsurf/README.md](integrations/windsurf/README.md) for detai
 Each agent becomes a workspace with `SOUL.md`, `AGENTS.md`, and `IDENTITY.md` in `~/.openclaw/agency-agents/`.
 
 ```bash
+./scripts/convert.sh --tool openclaw
 ./scripts/install.sh --tool openclaw
 ```
 
-Agents are registered and available by `agentId` in OpenClaw sessions.
+If the `openclaw` CLI is available, the installer registers each workspace automatically.
+Run `openclaw gateway restart` after installation so the new agents are activated.
 
 See [integrations/openclaw/README.md](integrations/openclaw/README.md) for details.
 
